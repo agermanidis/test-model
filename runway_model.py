@@ -40,6 +40,9 @@ import runway
 from runway.data_types import number, text, image
 from example_model import ExampleModel
 
+from torchvision import models
+model = models.vgg19(pretrained=True)
+
 # Setup the model, initialize weights, set the configs of the model, etc.
 # Every model will have a different set of configurations and requirements.
 # Check https://docs.runwayapp.ai/#/python-sdk to see a complete list of
