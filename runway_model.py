@@ -50,7 +50,8 @@ model = models.vgg19(pretrained=True)
 # used.
 setup_options = {
     'truncation': number(min=1, max=10, step=1, default=5, description='Example input.'),
-    'seed': number(min=0, max=1000000, description='A seed used to initialize the model.')
+    'seed': number(min=0, max=1000000, description='A seed used to initialize the model.'),
+    'checkpoint': runway.file(extension='.pkl')
 }
 @runway.setup(options=setup_options)
 def setup(opts):
